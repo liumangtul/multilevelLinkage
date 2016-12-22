@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch';
-import 'babel-polyfill'
-class LINKAGE {
+import 'babel-polyfill';
+window.LINKAGE=class LINKAGE {
     constructor(json){
         this._Sel_=[];
         this.isUnChaneindex=-1;
@@ -74,26 +74,53 @@ class LINKAGE {
     }
 
     getAjax(_ajax_){
-        let url=_ajax_.url;
+        /*let url=_ajax_.url;
+        let url2='';
         if(_ajax_.data){
-            url+='?';
             let urlArray=[];
             for(let name in _ajax_.data){
                 urlArray.push(name+'='+_ajax_.data[name]);
             }
-            url+=urlArray.join('&');
+            url2+=urlArray.join('&');
         }
         return fetch(url,{
-            method:_ajax_.method
+            method:_ajax_.method,
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: url2
+        })
+            .then(response => response.json())
+            .then(json =>{
+                return json;
+            })*/
+        let url=_ajax_.url;
+        let url2='';
+        if(_ajax_.data){
+            let urlArray=[];
+            for(let name in _ajax_.data){
+                urlArray.push(name+'='+_ajax_.data[name]);
+            }
+            url2+=urlArray.join('&');
+        }
+        return fetch(url,{
+            method:_ajax_.method,
+            credentials:'include',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+            },
+            body: url2
         })
             .then(response => response.json())
             .then(json =>{
                 return json;
             })
+
     }
 }
-
-let linkAge=new LINKAGE({
+/*
+window.LINKAGE=new LINKAGE({
     id:['#sel1','#sel2','#sel3'],
     _ajax_:{
         url:'./test.json',
@@ -119,4 +146,4 @@ let linkAge=new LINKAGE({
             }]
         }
     }
-});
+});*/
