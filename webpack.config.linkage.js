@@ -12,6 +12,7 @@ module.exports={
         extensions:['','.js','.jsx']
     },
     module:{
+        devtool: 'inline-source-map',
         loaders:[
             {
                 test:/\.js|jsx$/,
@@ -26,6 +27,6 @@ module.exports={
         ]
     },
     plugins:[
-        new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } })
+        /*new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } })*/
     ]
 }
