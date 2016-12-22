@@ -6,7 +6,7 @@ module.exports={
     entry:'./app/index.js',
     output:{
         path:path.join(__dirname,'./app/'),
-        filename:'linkAge.js'
+        filename:'link.js'
     },
     resolve:{
         extensions:['','.js','.jsx']
