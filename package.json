@@ -1,0 +1,32 @@
+{
+  "name": "linkage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "linkage": "webpack-dev-server --config webpack.config.linkage.js --inline --devtool eval --progress --colors --hot --content-base ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liumangtul/multilevelLinkage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liumangtul/multilevelLinkage/issues"
+  },
+  "homepage": "https://github.com/liumangtul/multilevelLinkage#readme",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "gulp": "^3.9.1",
+    "isomorphic-fetch": "^2.2.1",
+    "jquery": "^3.1.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
