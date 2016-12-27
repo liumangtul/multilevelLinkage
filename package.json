@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "linkage": "webpack-dev-server --config webpack.config.linkage.js --inline --devtool eval --progress --colors --hot --content-base ./",
-    "yan": "webpack-dev-server --config webpack.config.yan.js --inline --devtool eval --progress --colors --hot --content-base ./"
+    "yan": "webpack-dev-server --config webpack.config.yan.js --inline --devtool eval --progress --colors --hot --content-base ./",
+    "table": "webpack-dev-server --config ./tableTree/webpack.config.table.js --inline --devtool eval --progress --colors --hot --content-base ./tableTree/"
   },
   "repository": {
     "type": "git",

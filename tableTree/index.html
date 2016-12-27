@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .table{
+            border:1px solid #ccc;
+        }
+        .table tr{
+            border:1px solid #eee;
+        }
+        .table td{
+            padding:10px;
+        }
+        .firstTd{
+            background: #000000;
+            color:#fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+<script src="boudle.js"></script>
+<script>
+    var oT=new TableTree({
+        ajax:{
+            url:'json.json',
+            data:{
+                a:'a'
+            },
+            method:'get'
+        },
+        resultkey:{
+            parent:'adviceCategoryList',
+            child:'childCategory'
+        },
+        append:'#box'
+    })
+</script>
+</html>
