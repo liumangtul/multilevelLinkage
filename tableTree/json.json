@@ -20,11 +20,49 @@
             {
               "id": "13",
               "fatherId": "5",
-              "title": "唯一荤素搭配",
+              "title": "唯一荤素搭配ParA",
               "isUnique": "1",
               "isDel": "0",
               "icon": "/admin/images/Icon/20161221/585a529bb3970.png",
-              "childCategory": null
+              "childCategory": [
+                {
+                  "id": "142",
+                  "fatherId": "5",
+                  "title": "唯一荤素搭配__A_CHILDA",
+                  "isUnique": "1",
+                  "isDel": "0",
+                  "icon": "/admin/images/Icon/20161221/585a529bb3970.png",
+                  "childCategory": null
+                }
+              ]
+            },
+            {
+              "id": "142",
+              "fatherId": "5",
+              "title": "唯一荤素搭配ParB",
+              "isUnique": "1",
+              "isDel": "0",
+              "icon": "/admin/images/Icon/20161221/585a529bb3970.png",
+              "childCategory": [
+                {
+                  "id": "142",
+                  "fatherId": "5",
+                  "title": "唯一荤素搭配B__CHILDA",
+                  "isUnique": "1",
+                  "isDel": "0",
+                  "icon": "/admin/images/Icon/20161221/585a529bb3970.png",
+                  "childCategory": null
+                },
+                {
+                  "id": "142",
+                  "fatherId": "5",
+                  "title": "唯一荤素搭配B__CHILDB",
+                  "isUnique": "1",
+                  "isDel": "0",
+                  "icon": "/admin/images/Icon/20161221/585a529bb3970.png",
+                  "childCategory": null
+                }
+              ]
             }
           ]
         },

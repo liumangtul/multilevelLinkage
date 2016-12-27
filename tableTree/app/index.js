@@ -42,13 +42,56 @@ window.TableTree=class TableTree{
             ...this.data
         ])
         if(this.resultkey.parent){
-            let child=this.resultkey.child;
-            result=[
-                {
-                    [child]:result[this.resultkey.parent]
-                }
-            ]
+            result=Object.assign([],result[this.resultkey.parent]);
         }
+        console.log('RESULT',result)
+        for(let i=0;i<result.length;i++){
+            let oRow=Object.assign([],result[i]);
+            let oChild=Object.assign([],oRow[this.resultkey.child]);
+            let oOld=Object.assign([],result[i][this.resultkey.child]);
+            let ii=0;
+            let x=0;
+            let count=0;
+            while(oChild.length>0){
+                count++;
+                //console.log(oChild,ii,oChild[ii])
+                //console.log(oNextParent,'aa')
+                let b=null;
+                if(!oChild[ii]){
+                    //console.log(oChild[0],'true')
+                    //有子级
+                    ii=0;
+                    if(oChild[0][this.resultkey.child]){
+                        b='a';
+                        //x=0;
+                        oChild=oChild[ii][this.resultkey.child];
+                        //console.log('has')
+                        //没有子级返回到某某
+                    }else{
+                        b='b';
+                        x++;
+                        //console.log('x',x,ii,oOld[x])
+                        if(!oOld[x])break;
+                            oChild=Object.assign([],oOld[x][this.resultkey.child]);
+                        if(!oChild)oChild=[];
+                        //console.log('par',oChild,x)
+                        //if(oChild.title)console.log(oChild.title)
+                        if(x>5)break;
+                    }
+                }else{
+                    b='c';
+                    x=0;
+
+                }
+                console.log('CHILD_LIST',oChild[ii].title,ii,b,count,oChild[ii][this.resultkey.child])
+                if(!oChild[ii]){}else{
+                    ii++;
+                }
+                //if(oChild[ii].title)console.log(oChild[ii].title)
+                if(ii>4)break;
+            }
+        }
+
         //console.log(result[0],this.resultkey.parent)
         let str='';
         str+=`<table class="table">
@@ -62,22 +105,7 @@ window.TableTree=class TableTree{
         document.querySelector(this.append).innerHTML=str;
         //tobdy
         let bodyStr='';
-        console.log(result,'Result');
 
-        let i=0;
-        let row=Object.assign([],result[i][this.resultkey.child]);
-        while(row){
-            let iRow=Object.assign([],row[i]);
-            console.log(iRow.title)
-            let ii=0;
-            while(iRow.length>0){
-                iRow=iRow[this.resultkey.child]?iRow[this.resultkey.child]:[];
-                ii++;
-                if(ii>3)break;
-            }
-            i++;
-            if(i>5)break;
-        }
 
         /*for(let i=0;i<result.length;i++){
             console.log('-------',i,'-------')
