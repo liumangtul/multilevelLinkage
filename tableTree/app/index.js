@@ -45,7 +45,7 @@ window.TableTree=class TableTree{
             result=Object.assign([],result[this.resultkey.parent]);
         }
         console.log('RESULT',result)
-        for(let i=0;i<result.length;i++){
+        /*for(let i=0;i<result.length;i++){
             let oRow=Object.assign([],result[i]);
             let oChild=Object.assign([],oRow[this.resultkey.child]);
             let oOld=Object.assign([],result[i][this.resultkey.child]);
@@ -90,6 +90,57 @@ window.TableTree=class TableTree{
                 //if(oChild[ii].title)console.log(oChild[ii].title)
                 if(ii>4)break;
             }
+        }*/
+        let iP=0;
+        let I=0;
+        for(let i=0;i<result.length;i++){
+            let count=0;
+            let oList=result[i][this.resultkey.child];
+            console.log(i,result[i].title)
+
+
+            /*let ni=0;
+            let nii=0;
+            while(oList){
+                if(oList[ni][this.resultkey.child]){
+                    if(oList[ni][this.resultkey.child]){
+                        ni=0;
+                        if(nii>=oList[ni][this.resultkey.child].length){
+                            nii=0;
+                            if(oList[ni][this.resultkey.child]){
+                                oList=oList[ni][this.resultkey.child]
+                            }else{
+                                oList=Object.assign(result[i][this.resultkey.child][ni])
+                            }
+                        }
+                        console.log(ni,nii,oList)
+                        nii++;
+                    }
+                }
+                if(ni>oList.length-1){
+                    ni=0;
+                    break;
+                };
+                ni++;
+                count++;
+                if(count>10)break;
+            }*/
+
+
+
+
+
+            for(let ni=0;ni<oList.length;ni++){
+                console.info('      ',ni,oList[ni].title)
+                if(oList[ni][this.resultkey.child]){
+                    for(let nii=0;nii<oList[ni][this.resultkey.child].length;nii++){
+                        console.error('            ',nii,oList[ni][this.resultkey.child][nii].title);
+                    }
+                }
+            }
+
+
+
         }
 
         //console.log(result[0],this.resultkey.parent)
