@@ -28,7 +28,7 @@
                 {
                   "id": "142",
                   "fatherId": "5",
-                  "title": "唯一荤素搭配__A_CHILDA",
+                  "title": "荤素A_child_1",
                   "isUnique": "1",
                   "isDel": "0",
                   "icon": "/admin/images/Icon/20161221/585a529bb3970.png",
@@ -47,7 +47,7 @@
                 {
                   "id": "142",
                   "fatherId": "5",
-                  "title": "唯一荤素搭配B__CHILDA",
+                  "title": "荤素B_child_1",
                   "isUnique": "1",
                   "isDel": "0",
                   "icon": "/admin/images/Icon/20161221/585a529bb3970.png",
@@ -56,7 +56,7 @@
                 {
                   "id": "142",
                   "fatherId": "5",
-                  "title": "唯一荤素搭配B__CHILDB",
+                  "title": "荤素B_child_2",
                   "isUnique": "1",
                   "isDel": "0",
                   "icon": "/admin/images/Icon/20161221/585a529bb3970.png",
