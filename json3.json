@@ -1,0 +1,196 @@
+
+{
+  "adviceCategoryList": [
+    {
+      "id": "1",
+      "fatherId": "0",
+      "title": "饮食习惯",
+      "isUnique": "0",
+      "isDel": "0",
+      "icon": null,
+      "childCategory": [
+        {
+          "id": "5",
+          "fatherId": "1",
+          "title": "荤素搭配",
+          "isUnique": "0",
+          "isDel": "0",
+          "icon": null,
+          "childCategory": [
+            {
+              "id": "13",
+              "fatherId": "5",
+              "title": "唯一荤素搭配",
+              "isUnique": "1",
+              "isDel": "0",
+              "icon": "/admin/images/Icon/20161221/585a529bb3970.png",
+              "childCategory": null
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "fatherId": "1",
+          "title": "油炸食品",
+          "isUnique": "0",
+          "isDel": "0",
+          "icon": null,
+          "childCategory": [
+            {
+              "id": "14",
+              "fatherId": "6",
+              "title": "唯一油炸食品",
+              "isUnique": "1",
+              "isDel": "0",
+              "icon": "/admin/images/Icon/20161221/585a52a067a98.png",
+              "childCategory": null
+            }
+          ]
+        },
+        {
+          "id": "7",
+          "fatherId": "1",
+          "title": "咸、腌制食品",
+          "isUnique": "0",
+          "isDel": "0",
+          "icon": null,
+          "childCategory": [
+            {
+              "id": "15",
+              "fatherId": "7",
+              "title": "唯一咸、腌制食品",
+              "isUnique": "1",
+              "isDel": "0",
+              "icon": "/admin/images/Icon/20161221/585a52a4b54c8.png",
+              "childCategory": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "fatherId": "0",
+      "title": "生活习惯",
+      "isUnique": "0",
+      "isDel": "0",
+      "icon": null,
+      "childCategory": [
+        {
+          "id": "8",
+          "fatherId": "2",
+          "title": "吸烟",
+          "isUnique": "0",
+          "isDel": "0",
+          "icon": null,
+          "childCategory": [
+            {
+              "id": "16",
+              "fatherId": "8",
+              "title": "唯一吸烟",
+              "isUnique": "1",
+              "isDel": "0",
+              "icon": "/admin/images/Icon/20161221/585a52c425800.png",
+              "childCategory": null
+            }
+          ]
+        },
+        {
+          "id": "9",
+          "fatherId": "2",
+          "title": "饮酒",
+          "isUnique": "0",
+          "isDel": "0",
+          "icon": null,
+          "childCategory": [
+            {
+              "id": "17",
+              "fatherId": "9",
+              "title": "唯一饮酒",
+              "isUnique": "1",
+              "isDel": "0",
+              "icon": "/admin/images/Icon/20161221/585a52c91cf48.png",
+              "childCategory": null
+            }
+          ]
+        },
+        {
+          "id": "10",
+          "fatherId": "2",
+          "title": "熬夜",
+          "isUnique": "0",
+          "isDel": "0",
+          "icon": null,
+          "childCategory": [
+            {
+              "id": "18",
+              "fatherId": "10",
+              "title": "唯一熬夜",
+              "isUnique": "1",
+              "isDel": "0",
+              "icon": "/admin/images/Icon/20161221/585a52ce4b190.png",
+              "childCategory": null
+            }
+          ]
+        },
+        {
+          "id": "11",
+          "fatherId": "2",
+          "title": "运动",
+          "isUnique": "0",
+          "isDel": "0",
+          "icon": null,
+          "childCategory": [
+            {
+              "id": "19",
+              "fatherId": "11",
+              "title": "唯一运动",
+              "isUnique": "1",
+              "isDel": "0",
+              "icon": "/admin/images/Icon/20161221/585a52d27bed0.png",
+              "childCategory": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "fatherId": "0",
+      "title": "健康状况",
+      "isUnique": "0",
+      "isDel": "0",
+      "icon": null,
+      "childCategory": null
+    },
+    {
+      "id": "4",
+      "fatherId": "0",
+      "title": "家族病史",
+      "isUnique": "0",
+      "isDel": "0",
+      "icon": null,
+      "childCategory": [
+        {
+          "id": "12",
+          "fatherId": "4",
+          "title": "家族遗传",
+          "isUnique": "0",
+          "isDel": "0",
+          "icon": null,
+          "childCategory": [
+            {
+              "id": "20",
+              "fatherId": "12",
+              "title": "唯一家族遗传",
+              "isUnique": "1",
+              "isDel": "0",
+              "icon": "/admin/images/Icon/20161221/585a52d6a7df0.png",
+              "childCategory": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
