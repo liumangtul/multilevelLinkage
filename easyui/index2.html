@@ -11,7 +11,9 @@
 <body>
     <h1>jQuery-EasyUI-treeGrid插件</h1>
     <h3>树形table</h3>
-    <table id="dd">
+    <table id="dd"
+           data-options="nowrap:false"
+    >
         <thead>
         <tr>
             <th data-options="field:'id',width:80">ID</th>
@@ -45,6 +47,10 @@
             border: false,
             idField: 'id', //主键
             treeField:'title',
+            nowrap:false,
+            fitColumns:true,
+            striped:true,
+            singleSelect:true,
             //parentField:'fatherId',
             //resultAsTree:false,
             //nodesField:'children',
@@ -64,6 +70,79 @@
                 console.log(data,res)
                 return data;
             },
+            onBeforeEdit:function (ind,row) {
+                console.log(ind,row)
+            },
+            columns:[[
+                {
+                    field:'id',
+                    title:'ID',
+                    width:80,
+                    sortable:true,
+                    formatter:function (value,row,index) {
+                        return value;
+                    }
+                },
+                {
+                    field:'title',
+                    title:'标题',
+                    width:180,
+                    editor:'text',
+                    sortable:true,
+                    formatter:function (value,row,index) {
+                        return value;
+                    }
+                },
+                {
+                    field:'describe',
+                    title:'描述',
+                    width:180,
+                    editor:'text',
+                    sortable:true,
+                    editor:{
+                        type:'textarea',
+                        options:{
+                            rows:5
+                        }
+                    },
+                    formatter:function (value,row,index) {
+                        return '<div style="width: 100%;display:block;word-break: break-all;word-wrap: break-word;nowrap:false">'+value+'</div>';
+                    }
+                },
+                {
+                    field:'sort',
+                    title:'排序',
+                    width:180,
+                    editor:'text',
+                    sortable:true,
+                    formatter:function (value,row,index) {
+                        return value;
+                    }
+                },
+                {
+                    field:'isShow',
+                    title:'是否显示',
+                    width:180,
+                    editor:'text',
+                    sortable:true,
+                    formatter:function (value,row,index) {
+                        if(value==0){
+                            return '显示'
+                        }else{
+                            return '隐藏'
+                        }
+                    }
+                },
+                {
+                    field:'fatherId',
+                    title:'fatherID',
+                    width:180,
+                    sortable:true,
+                    formatter:function (value,row,index) {
+                        return value;
+                    }
+                }
+            ]],
             toolbar: [
                 {
                     text: '添加',
@@ -235,6 +314,31 @@
                 }
             }
         });
+    });
+
+    $.extend($.fn.datagrid.defaults.editors, {
+
+        textarea: {
+            init: function(container, options){
+                var input = $('<textarea class="datagrid-editable-input" rows='+options.rows+'></textarea>').appendTo(container);
+                return input;
+            },
+            getValue: function(target){
+                return $(target).val();
+            },
+            setValue: function(target, value){
+                $(target).val(value);
+            },
+            resize: function(target, width){
+
+                var input = $(target);
+                if ($.boxModel == true){
+                    input.width(width - (input.outerWidth() - input.width()));
+                } else {
+                    input.width(width);
+                }
+            }
+        }
     });
 </script>
 
